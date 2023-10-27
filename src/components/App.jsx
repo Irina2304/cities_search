@@ -7,9 +7,9 @@ export const App = () => {
   const [city, setCity] = useState('');
   const [data, setData] = useState(false);
   const [cityData, setCityData] = useState({});
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
-  const [isLoadMore, setIsLoadMore] = useState(false);
+  // const [loading, setLoading] = useState(false);
+  // const [error, setError] = useState(false);
+  // const [isLoadMore, setIsLoadMore] = useState(false);
 
   const getCity = value => {
     setCity(value);
@@ -19,8 +19,8 @@ export const App = () => {
   // setData(false);
 
   useEffect(() => {
-    setError(false);
-    setIsLoadMore(false);
+    // setError(false);
+    // setIsLoadMore(false);
     if (city === '') {
       return;
     }
@@ -35,11 +35,11 @@ export const App = () => {
         setData(true);
       })
       .catch(() => {
-        setError(true);
+        // setError(true);
       })
 
       .finally(() => {
-        setLoading(false);
+        // setLoading(false);
       });
   }, [city]);
 
