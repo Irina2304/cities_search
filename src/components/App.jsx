@@ -38,9 +38,7 @@ export const App = () => {
         // setError(true);
       })
 
-      .finally(() => {
-        // setLoading(false);
-      });
+      .finally(() => {});
   }, [city]);
 
   // const getCityData = value => {
