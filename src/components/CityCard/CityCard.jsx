@@ -4,11 +4,15 @@ import {
   CityList,
   CityItem,
   CityText,
+  CityBtn,
 } from './CityCard.styled.js';
 
-export const CityCard = ({ cityData }) => {
-  console.log(cityData);
-  const { name, country, population, latitude, longitude } = cityData;
+export const CityCard = ({ cityData, onAddCity }) => {
+  const { name, country, population, latitude, longitude, id } = cityData;
+
+  const onAddClick = () => {
+    onAddCity(cityData);
+  };
 
   return (
     <CityCardContainer className="CityCard">
@@ -20,7 +24,7 @@ export const CityCard = ({ cityData }) => {
         </CityItem>
         <CityItem className="CityItem">
           <CityText className="CityText">population:</CityText>
-          <CityText className="CityText">{population} people</CityText>
+          <CityText className="CityText">{population}&nbsp;people</CityText>
         </CityItem>
         <CityItem className="CityItem">
           <CityText className="CityText">latitude:</CityText>
@@ -31,6 +35,9 @@ export const CityCard = ({ cityData }) => {
           <CityText className="CityText">{longitude}&#176;</CityText>
         </CityItem>
       </CityList>
+      <CityBtn type="button" name={id} onClick={onAddClick}>
+        Add to favorite list
+      </CityBtn>
     </CityCardContainer>
   );
 };
