@@ -75,10 +75,6 @@ export const App = () => {
     );
   };
 
-  const cityInList = () => {
-    Notiflix.Notify.warning('is already in Favorite List');
-  };
-
   return (
     <>
       <SearchBar getCity={getCity} />
