@@ -12,7 +12,8 @@ export const FavoriteCityName = styled.h2`
 
 export const FavoriteList = styled.ul`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
   padding: 15px;
 `;
